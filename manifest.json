@@ -1,0 +1,27 @@
+{
+  "name": "Kasir DANA",
+  "short_name": "Kasir DANA",
+  "description": "Sistem Kasir Digital Toko DANA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#1565C0",
+  "theme_color": "#1565C0",
+  "orientation": "portrait",
+  "lang": "id",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='32' fill='%231565C0'/><rect x='30' y='45' width='132' height='90' rx='12' fill='none' stroke='white' stroke-width='8'/><path d='M50 75h25M50 100h55M90 75h52' stroke='white' stroke-width='7' stroke-linecap='round'/><path d='M60 135v18M132 135v18M48 153h96' stroke='white' stroke-width='7' stroke-linecap='round'/></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='80' fill='%231565C0'/><rect x='80' y='120' width='352' height='240' rx='30' fill='none' stroke='white' stroke-width='20'/><path d='M130 195h65M130 260h145M240 195h142' stroke='white' stroke-width='18' stroke-linecap='round'/><path d='M160 360v50M352 360v50M130 410h252' stroke='white' stroke-width='18' stroke-linecap='round'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "finance", "shopping"],
+  "screenshots": []
+}
