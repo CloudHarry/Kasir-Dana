@@ -23,7 +23,6 @@
     --radius:12px;--radius-sm:8px;
   }
   body{font-family:'Segoe UI',system-ui,sans-serif;background:#F0F4F8;color:var(--text);min-height:100vh;overflow-x:hidden}
-  /* TOP BAR */
   .topbar{background:var(--blue);color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 6px rgba(0,0,0,0.2)}
   .topbar-left{display:flex;align-items:center;gap:10px}
   .logo-icon{width:34px;height:34px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -32,41 +31,40 @@
   .toko-sub{font-size:11px;opacity:0.8;margin-top:1px}
   .cart-btn{position:relative;background:rgba(255,255,255,0.15);border:none;color:#fff;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px}
   .cart-badge{position:absolute;top:-4px;right:-4px;background:#FF5252;color:#fff;font-size:10px;font-weight:700;width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;display:none}
-  /* NAV TABS */
   .nav-tabs{display:flex;background:#fff;border-bottom:1px solid #E0E0E0;position:sticky;top:62px;z-index:99}
   .nav-tab{flex:1;padding:12px 4px;text-align:center;font-size:12px;font-weight:500;color:var(--gray3);border-bottom:2px solid transparent;cursor:pointer;transition:all 0.2s;display:flex;flex-direction:column;align-items:center;gap:3px}
   .nav-tab.active{color:var(--blue);border-bottom-color:var(--blue)}
   .nav-tab svg{width:20px;height:20px}
-  /* PAGES */
   .page{display:none;padding:12px;padding-bottom:80px}
   .page.active{display:block}
-  /* SEARCH BAR */
   .search-wrap{position:relative;margin-bottom:12px}
   .search-wrap input{width:100%;padding:11px 16px 11px 40px;border:1.5px solid #E0E0E0;border-radius:var(--radius);font-size:14px;background:#fff;outline:none;transition:border 0.2s}
   .search-wrap input:focus{border-color:var(--blue)}
-  .search-wrap .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gray3)}
-  /* FILTER BAR */
+  .search-wrap .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gray3);font-size:16px}
   .filter-bar{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;scrollbar-width:none}
   .filter-bar::-webkit-scrollbar{display:none}
   .filter-chip{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;white-space:nowrap;cursor:pointer;border:1.5px solid #E0E0E0;background:#fff;color:var(--text2);transition:all 0.2s;flex-shrink:0}
   .filter-chip.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
   /* PRODUCT GRID */
   .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .product-card{background:#fff;border-radius:var(--radius);padding:12px;box-shadow:0 1px 4px rgba(0,0,0,0.06);cursor:pointer;transition:transform 0.15s,box-shadow 0.15s;position:relative}
+  .product-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08);cursor:pointer;transition:transform 0.15s;position:relative}
   .product-card:active{transform:scale(0.97)}
-  .product-emoji{font-size:28px;margin-bottom:8px;display:block}
-  .product-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:4px;line-height:1.3}
-  .product-category{font-size:11px;color:var(--gray3);margin-bottom:6px}
-  .product-price{font-size:14px;font-weight:700;color:var(--blue)}
-  .product-add-btn{position:absolute;bottom:10px;right:10px;background:var(--blue);color:#fff;width:28px;height:28px;border-radius:50%;border:none;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
-  .product-qty-badge{position:absolute;top:8px;right:8px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:10px}
-  /* EMPTY STATE */
+  .product-img-wrap{width:100%;aspect-ratio:1/1;background:#F0F4F8;overflow:hidden;position:relative}
+  .product-img-wrap img{width:100%;height:100%;object-fit:cover}
+  .product-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#C8D6E5}
+  .product-img-placeholder svg{width:40px;height:40px}
+  .product-info{padding:8px 10px 32px}
+  .product-name{font-size:12px;font-weight:600;color:var(--text);line-height:1.3;margin-bottom:2px}
+  .product-category{font-size:10px;color:var(--gray3);margin-bottom:4px}
+  .product-price{font-size:13px;font-weight:700;color:var(--blue)}
+  .product-add-btn{position:absolute;bottom:8px;right:8px;background:var(--blue);color:#fff;width:26px;height:26px;border-radius:50%;border:none;font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(21,101,192,0.4)}
+  .product-qty-badge{position:absolute;top:6px;left:6px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;padding:2px 7px;border-radius:10px;z-index:2}
+
   .empty-state{text-align:center;padding:40px 20px;color:var(--gray3)}
   .empty-state svg{width:56px;height:56px;margin-bottom:12px;opacity:0.4}
   .empty-state p{font-size:14px}
-  /* FAB */
   .fab{position:fixed;bottom:24px;right:20px;background:var(--blue);color:#fff;width:56px;height:56px;border-radius:50%;box-shadow:0 4px 14px rgba(21,101,192,0.45);border:none;font-size:28px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:200}
-  /* BOTTOM SHEET */
   .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:300;display:none;opacity:0;transition:opacity 0.25s}
   .overlay.show{display:block;opacity:1}
   .bottom-sheet{position:fixed;bottom:0;left:0;right:0;background:#fff;border-radius:20px 20px 0 0;z-index:400;transform:translateY(100%);transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);max-height:92vh;overflow-y:auto}
@@ -76,7 +74,6 @@
   .sheet-title{font-size:16px;font-weight:700}
   .sheet-close{background:none;border:none;font-size:22px;color:var(--gray3);cursor:pointer;padding:4px}
   .sheet-body{padding:16px 20px}
-  /* FORM */
   .form-group{margin-bottom:16px}
   .form-label{font-size:13px;font-weight:600;color:var(--text2);margin-bottom:6px;display:block}
   .form-input{width:100%;padding:11px 14px;border:1.5px solid #E0E0E0;border-radius:var(--radius-sm);font-size:14px;outline:none;transition:border 0.2s}
@@ -88,10 +85,24 @@
   .btn-danger{background:var(--red);color:#fff}
   .btn-success{background:var(--green);color:#fff}
   .btn-outline{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
-  /* KERANJANG / CART */
+
+  /* IMAGE UPLOAD */
+  .img-upload-area{width:100%;aspect-ratio:16/9;border:2px dashed #C8D6E5;border-radius:var(--radius);background:#F8FAFC;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;position:relative;transition:border 0.2s}
+  .img-upload-area:hover{border-color:var(--blue)}
+  .img-upload-area img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+  .img-upload-label{display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--gray3);pointer-events:none}
+  .img-upload-label svg{width:32px;height:32px}
+  .img-upload-label span{font-size:13px;font-weight:500}
+  .img-upload-label small{font-size:11px}
+  .img-change-btn{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.55);color:#fff;border:none;border-radius:6px;font-size:11px;padding:4px 10px;cursor:pointer}
+
+  /* CART */
   .cart-list{display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
-  .cart-item{background:#fff;border-radius:var(--radius-sm);padding:12px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
-  .cart-item-emoji{font-size:24px}
+  .cart-item{background:#fff;border-radius:var(--radius-sm);padding:10px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+  .cart-item-img{width:44px;height:44px;border-radius:8px;background:#F0F4F8;overflow:hidden;flex-shrink:0}
+  .cart-item-img img{width:100%;height:100%;object-fit:cover}
+  .cart-item-img-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#C8D6E5}
+  .cart-item-img-ph svg{width:22px;height:22px}
   .cart-item-info{flex:1;min-width:0}
   .cart-item-name{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .cart-item-price{font-size:12px;color:var(--gray3);margin-top:2px}
@@ -99,12 +110,10 @@
   .qty-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--blue);background:#fff;color:var(--blue);font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer}
   .qty-num{font-size:14px;font-weight:700;min-width:20px;text-align:center}
   .cart-delete{color:var(--red);background:none;border:none;font-size:18px;cursor:pointer;padding:4px;flex-shrink:0}
-  /* TOTAL */
   .total-box{background:var(--blue-light);border-radius:var(--radius);padding:14px 16px}
   .total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:14px}
   .total-row:last-child{margin-bottom:0;font-size:16px;font-weight:700;color:var(--blue)}
   .total-row.divider{border-top:1px dashed #BBDEFB;padding-top:8px;margin-top:4px}
-  /* BAYAR SHEET */
   .bayar-amount{font-size:32px;font-weight:800;color:var(--blue);text-align:center;margin:12px 0 6px}
   .bayar-sub{font-size:13px;color:var(--gray3);text-align:center;margin-bottom:16px}
   .nominal-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px}
@@ -116,6 +125,7 @@
   .kurang-box{background:var(--red-light);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
   .kurang-label{font-size:13px;color:var(--red)}
   .kurang-value{font-size:18px;font-weight:700;color:var(--red)}
+
   /* RIWAYAT */
   .riwayat-list{display:flex;flex-direction:column;gap:10px}
   .riwayat-card{background:#fff;border-radius:var(--radius);padding:14px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
@@ -128,44 +138,47 @@
   .riwayat-kembalian{font-size:12px;color:var(--green)}
   .badge{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600}
   .badge-success{background:var(--green-light);color:var(--green)}
+
   /* PRODUK MANAGE */
   .manage-list{display:flex;flex-direction:column;gap:10px}
-  .manage-card{background:#fff;border-radius:var(--radius);padding:12px 14px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
-  .manage-emoji{font-size:24px}
+  .manage-card{background:#fff;border-radius:var(--radius);padding:10px 12px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+  .manage-img{width:52px;height:52px;border-radius:8px;background:#F0F4F8;overflow:hidden;flex-shrink:0}
+  .manage-img img{width:100%;height:100%;object-fit:cover}
+  .manage-img-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#C8D6E5}
+  .manage-img-ph svg{width:26px;height:26px}
   .manage-info{flex:1;min-width:0}
   .manage-name{font-size:13px;font-weight:600}
-  .manage-meta{font-size:12px;color:var(--gray3);margin-top:2px}
+  .manage-meta{font-size:11px;color:var(--gray3);margin-top:2px}
   .manage-price{font-size:14px;font-weight:700;color:var(--blue);margin-top:2px}
   .manage-actions{display:flex;gap:6px;flex-shrink:0}
   .icon-btn{width:34px;height:34px;border-radius:var(--radius-sm);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px}
   .icon-btn-edit{background:#E3F2FD;color:var(--blue)}
   .icon-btn-del{background:#FFEBEE;color:var(--red)}
-  /* SUMMARY CARDS */
+
+  /* LAPORAN */
   .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
   .summary-card{background:#fff;border-radius:var(--radius);padding:14px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
   .summary-label{font-size:11px;color:var(--gray3);font-weight:500;margin-bottom:4px}
   .summary-value{font-size:20px;font-weight:700;color:var(--blue)}
   .summary-card.green .summary-value{color:var(--green)}
   .summary-card.amber .summary-value{color:var(--amber)}
+
   /* NOTA */
   .nota-wrap{background:#fff;border:1px dashed #BDBDBD;border-radius:var(--radius);padding:16px;font-family:'Courier New',monospace;font-size:12px;line-height:1.8}
   .nota-center{text-align:center}
   .nota-hr{border:none;border-top:1px dashed #BDBDBD;margin:8px 0}
   .nota-row{display:flex;justify-content:space-between}
-  /* TOAST */
+
   .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:#323232;color:#fff;padding:10px 20px;border-radius:24px;font-size:13px;font-weight:500;z-index:999;opacity:0;transition:all 0.3s;pointer-events:none;white-space:nowrap}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-  /* SUKSES ANIM */
   .sukses-icon{font-size:60px;text-align:center;margin:20px 0 10px;animation:pop 0.4s ease}
   @keyframes pop{0%{transform:scale(0.5)}80%{transform:scale(1.1)}100%{transform:scale(1)}}
-  /* SCROLL */
   ::-webkit-scrollbar{width:4px}
   ::-webkit-scrollbar-thumb{background:#E0E0E0;border-radius:2px}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-left">
     <div class="logo-icon">
@@ -176,17 +189,16 @@
       </svg>
     </div>
     <div>
-      <div class="toko-name">Warung DANA</div>
+      <div class="toko-name">Kasir DANA</div>
       <div class="toko-sub">Toserba</div>
     </div>
   </div>
   <button class="cart-btn" onclick="showCart()">
-    🛒
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
     <span class="cart-badge" id="cartBadge">0</span>
   </button>
 </div>
 
-<!-- NAV TABS -->
 <div class="nav-tabs">
   <div class="nav-tab active" onclick="showPage('kasir',this)">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -197,7 +209,7 @@
     Produk
   </div>
   <div class="nav-tab" onclick="showPage('riwayat',this)">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
     Riwayat
   </div>
   <div class="nav-tab" onclick="showPage('laporan',this)">
@@ -209,7 +221,9 @@
 <!-- PAGE: KASIR -->
 <div class="page active" id="page-kasir">
   <div class="search-wrap">
-    <span class="search-icon">🔍</span>
+    <span class="search-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </span>
     <input type="text" id="searchKasir" placeholder="Cari produk..." oninput="renderKasir()">
   </div>
   <div class="filter-bar" id="filterBarKasir"></div>
@@ -219,7 +233,9 @@
 <!-- PAGE: PRODUK -->
 <div class="page" id="page-produk">
   <div class="search-wrap">
-    <span class="search-icon">🔍</span>
+    <span class="search-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    </span>
     <input type="text" id="searchProduk" placeholder="Cari produk..." oninput="renderProduk()">
   </div>
   <div class="filter-bar" id="filterBarProduk"></div>
@@ -253,29 +269,28 @@
     </div>
   </div>
   <div style="background:#fff;border-radius:var(--radius);padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:12px">
-    <div style="font-size:13px;font-weight:700;margin-bottom:10px;color:var(--text2)">📦 PRODUK TERLARIS</div>
+    <div style="font-size:13px;font-weight:700;margin-bottom:10px;color:var(--text2)">PRODUK TERLARIS</div>
     <div id="lapTerlaris"></div>
   </div>
-  <button class="btn btn-danger" onclick="if(confirm('Reset semua riwayat transaksi?')){riwayat=[];simpan();renderLaporan();renderRiwayat();showToast('Riwayat direset')}">🗑️ Reset Riwayat</button>
+  <button class="btn btn-danger" onclick="if(confirm('Reset semua riwayat transaksi?')){riwayat=[];simpan();renderLaporan();renderRiwayat();showToast('Riwayat direset')}">Reset Riwayat</button>
 </div>
 
-<!-- OVERLAY -->
 <div class="overlay" id="overlay" onclick="closeAll()"></div>
 
 <!-- SHEET: KERANJANG -->
 <div class="bottom-sheet" id="sheetCart">
   <div class="sheet-handle"></div>
   <div class="sheet-header">
-    <span class="sheet-title">🛒 Keranjang</span>
+    <span class="sheet-title">Keranjang</span>
     <button class="sheet-close" onclick="closeAll()">✕</button>
   </div>
   <div class="sheet-body">
     <div class="cart-list" id="cartList"></div>
     <div class="total-box" id="totalBox"></div>
     <div style="height:12px"></div>
-    <button class="btn btn-success" onclick="openBayar()" id="btnBayar">💳 Bayar Sekarang</button>
+    <button class="btn btn-success" onclick="openBayar()">Bayar Sekarang</button>
     <div style="height:8px"></div>
-    <button class="btn btn-outline" onclick="if(confirm('Kosongkan keranjang?')){cart=[];updateCart();closeAll();showToast('Keranjang dikosongkan')}">🗑️ Kosongkan</button>
+    <button class="btn btn-outline" onclick="if(confirm('Kosongkan keranjang?')){cart=[];updateCart();closeAll();showToast('Keranjang dikosongkan')}">Kosongkan</button>
   </div>
 </div>
 
@@ -283,7 +298,7 @@
 <div class="bottom-sheet" id="sheetBayar">
   <div class="sheet-handle"></div>
   <div class="sheet-header">
-    <span class="sheet-title">💳 Pembayaran</span>
+    <span class="sheet-title">Pembayaran</span>
     <button class="sheet-close" onclick="closeSheet('sheetBayar');openSheet('sheetCart')">← Kembali</button>
   </div>
   <div class="sheet-body">
@@ -302,7 +317,7 @@
       <button class="nominal-btn" onclick="setNominalPas()">Uang Pas</button>
     </div>
     <div id="kembalianInfo"></div>
-    <button class="btn btn-success" onclick="prosesTransaksi()" id="btnProses">✅ Proses Transaksi</button>
+    <button class="btn btn-success" onclick="prosesTransaksi()" id="btnProses">Proses Transaksi</button>
   </div>
 </div>
 
@@ -310,7 +325,7 @@
 <div class="bottom-sheet" id="sheetSukses">
   <div class="sheet-handle"></div>
   <div class="sheet-header">
-    <span class="sheet-title">✅ Transaksi Berhasil</span>
+    <span class="sheet-title">Transaksi Berhasil</span>
     <button class="sheet-close" onclick="closeAll()">✕</button>
   </div>
   <div class="sheet-body" id="suksesBody"></div>
@@ -324,6 +339,20 @@
     <button class="sheet-close" onclick="closeAll()">✕</button>
   </div>
   <div class="sheet-body">
+    <!-- IMAGE UPLOAD -->
+    <div class="form-group">
+      <label class="form-label">Foto Produk</label>
+      <div class="img-upload-area" id="imgUploadArea" onclick="document.getElementById('inputGambar').click()">
+        <img id="imgPreview" src="" alt="" style="display:none">
+        <div class="img-upload-label" id="imgUploadLabel">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Tap untuk upload foto</span>
+          <small>JPG, PNG, WebP</small>
+        </div>
+        <button class="img-change-btn" id="imgChangeBtn" style="display:none" onclick="event.stopPropagation();document.getElementById('inputGambar').click()">Ganti Foto</button>
+      </div>
+      <input type="file" id="inputGambar" accept="image/*" style="display:none" onchange="previewGambar(this)">
+    </div>
     <div class="form-group">
       <label class="form-label">Nama Produk *</label>
       <input type="text" class="form-input" id="inputNama" placeholder="Nama produk">
@@ -335,171 +364,157 @@
     <div class="form-group">
       <label class="form-label">Kategori *</label>
       <select class="form-select" id="inputKategori">
-        <option value="Minuman">🥤 Minuman</option>
-        <option value="Makanan Siap Saji">🍱 Makanan Siap Saji</option>
-        <option value="Mie &amp; Bumbu">🍜 Mie &amp; Bumbu</option>
-        <option value="Snack &amp; Biskuit">🍪 Snack &amp; Biskuit</option>
-        <option value="Permen &amp; Coklat">🍬 Permen &amp; Coklat</option>
-        <option value="Rokok">🚬 Rokok</option>
-        <option value="Sembako">🛒 Sembako</option>
-        <option value="Produk Susu">🥛 Produk Susu</option>
-        <option value="Roti &amp; Kue">🍞 Roti &amp; Kue</option>
-        <option value="Bumbu &amp; Saos">🧴 Bumbu &amp; Saos</option>
-        <option value="Kebersihan Diri">🧼 Kebersihan Diri</option>
-        <option value="Perawatan Rambut">💆 Perawatan Rambut</option>
-        <option value="Deterjen &amp; Pembersih">🧹 Deterjen &amp; Pembersih</option>
-        <option value="Kesehatan">💊 Kesehatan</option>
-        <option value="Alat Tulis">✏️ Alat Tulis</option>
-        <option value="Pulsa &amp; Token">📱 Pulsa &amp; Token</option>
-        <option value="Lainnya">📦 Lainnya</option>
+        <option value="Minuman">Minuman</option>
+        <option value="Makanan Siap Saji">Makanan Siap Saji</option>
+        <option value="Mie & Bumbu">Mie &amp; Bumbu</option>
+        <option value="Snack & Biskuit">Snack &amp; Biskuit</option>
+        <option value="Permen & Coklat">Permen &amp; Coklat</option>
+        <option value="Rokok">Rokok</option>
+        <option value="Sembako">Sembako</option>
+        <option value="Produk Susu">Produk Susu</option>
+        <option value="Roti & Kue">Roti &amp; Kue</option>
+        <option value="Bumbu & Saos">Bumbu &amp; Saos</option>
+        <option value="Kebersihan Diri">Kebersihan Diri</option>
+        <option value="Perawatan Rambut">Perawatan Rambut</option>
+        <option value="Deterjen & Pembersih">Deterjen &amp; Pembersih</option>
+        <option value="Kesehatan">Kesehatan</option>
+        <option value="Alat Tulis">Alat Tulis</option>
+        <option value="Pulsa & Token">Pulsa &amp; Token</option>
+        <option value="Lainnya">Lainnya</option>
       </select>
     </div>
-    <div class="form-group">
-      <label class="form-label">Emoji / Ikon</label>
-      <input type="text" class="form-input" id="inputEmoji" placeholder="🛒" maxlength="4">
-    </div>
     <input type="hidden" id="editProdukId">
-    <button class="btn btn-primary" onclick="saveProduk()" style="margin-bottom:10px">💾 Simpan Produk</button>
-    <button class="btn btn-danger" id="btnHapusProduk" onclick="hapusProdukEdit()" style="display:none">🗑️ Hapus Produk</button>
+    <button class="btn btn-primary" onclick="saveProduk()" style="margin-bottom:10px">Simpan Produk</button>
+    <button class="btn btn-danger" id="btnHapusProduk" onclick="hapusProdukEdit()" style="display:none">Hapus Produk</button>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
+// ===== IMG PLACEHOLDER SVG =====
+const IMG_PH = `<div class="product-img-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`;
+const CART_PH = `<div class="cart-item-img-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`;
+const MANAGE_PH = `<div class="manage-img-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="26" height="26"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>`;
+
 // ===== DATA =====
 let produk = JSON.parse(localStorage.getItem('dana_produk') || 'null') || [
-  // MINUMAN
-  {id:1,nama:'Aqua 600ml',harga:4000,kategori:'Minuman',emoji:'💧'},
-  {id:2,nama:'Aqua 1500ml',harga:6000,kategori:'Minuman',emoji:'💧'},
-  {id:3,nama:'Le Minerale 600ml',harga:3500,kategori:'Minuman',emoji:'💧'},
-  {id:4,nama:'Teh Botol Sosro 450ml',harga:5000,kategori:'Minuman',emoji:'🍵'},
-  {id:5,nama:'Teh Pucuk 350ml',harga:4000,kategori:'Minuman',emoji:'🍵'},
-  {id:6,nama:'Coca Cola 390ml',harga:7000,kategori:'Minuman',emoji:'🥤'},
-  {id:7,nama:'Sprite 390ml',harga:7000,kategori:'Minuman',emoji:'🥤'},
-  {id:8,nama:'Fanta 390ml',harga:7000,kategori:'Minuman',emoji:'🥤'},
-  {id:9,nama:'Pocari Sweat 500ml',harga:9000,kategori:'Minuman',emoji:'🥤'},
-  {id:10,nama:'Mizone 500ml',harga:8000,kategori:'Minuman',emoji:'🥤'},
-  {id:11,nama:'Good Day Cappuccino',harga:4500,kategori:'Minuman',emoji:'☕'},
-  {id:12,nama:'Kopi Kapal Api Sachet',harga:2000,kategori:'Minuman',emoji:'☕'},
-  {id:13,nama:'Nescafe 3in1',harga:3500,kategori:'Minuman',emoji:'☕'},
-  {id:14,nama:'Susu Ultra 200ml',harga:6000,kategori:'Minuman',emoji:'🥛'},
-  {id:15,nama:'Floridina Jeruk',harga:5000,kategori:'Minuman',emoji:'🍊'},
-  // MIE & BUMBU
-  {id:16,nama:'Indomie Goreng',harga:3500,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:17,nama:'Indomie Soto',harga:3500,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:18,nama:'Indomie Ayam Bawang',harga:3500,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:19,nama:'Indomie Rendang',harga:3800,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:20,nama:'Mie Sedaap Goreng',harga:3500,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:21,nama:'Mie Sedaap Soto',harga:3500,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:22,nama:'Pop Mie Ayam',harga:6000,kategori:'Mie & Bumbu',emoji:'🍜'},
-  {id:23,nama:'Pop Mie Goreng',harga:6000,kategori:'Mie & Bumbu',emoji:'🍜'},
-  // MAKANAN SIAP SAJI
-  {id:24,nama:'Sosis So Nice',harga:5000,kategori:'Makanan Siap Saji',emoji:'🌭'},
-  {id:25,nama:'Baso Aci',harga:7000,kategori:'Makanan Siap Saji',emoji:'🍢'},
-  {id:26,nama:'Telur Rebus',harga:3000,kategori:'Makanan Siap Saji',emoji:'🥚'},
-  {id:27,nama:'Roti Bakar',harga:8000,kategori:'Makanan Siap Saji',emoji:'🍞'},
-  // SNACK & BISKUIT
-  {id:28,nama:'Chitato Original 68g',harga:10000,kategori:'Snack & Biskuit',emoji:'🥔'},
-  {id:29,nama:'Chitato Sapi Panggang',harga:10000,kategori:'Snack & Biskuit',emoji:'🥔'},
-  {id:30,nama:'Lays Original 62g',harga:10000,kategori:'Snack & Biskuit',emoji:'🍟'},
-  {id:31,nama:'Cheetos Jagung',harga:7000,kategori:'Snack & Biskuit',emoji:'🌽'},
-  {id:32,nama:'Qtela Singkong',harga:7000,kategori:'Snack & Biskuit',emoji:'🍟'},
-  {id:33,nama:'Oreo Original 133g',harga:12000,kategori:'Snack & Biskuit',emoji:'🍪'},
-  {id:34,nama:'Roma Kelapa',harga:8000,kategori:'Snack & Biskuit',emoji:'🍪'},
-  {id:35,nama:'Tango Wafer',harga:5000,kategori:'Snack & Biskuit',emoji:'🍫'},
-  {id:36,nama:'Richeese Nabati',harga:5000,kategori:'Snack & Biskuit',emoji:'🧀'},
-  {id:37,nama:'Makaroni Ngehe',harga:3000,kategori:'Snack & Biskuit',emoji:'🍿'},
-  {id:38,nama:'Kacang Garuda Salut 70g',harga:8000,kategori:'Snack & Biskuit',emoji:'🥜'},
-  {id:39,nama:'Keripik Maicih Lvl 3',harga:10000,kategori:'Snack & Biskuit',emoji:'🌶️'},
-  // PERMEN & COKLAT
-  {id:40,nama:'Kopiko Coklat',harga:2000,kategori:'Permen & Coklat',emoji:'🍬'},
-  {id:41,nama:'Mentos Mint',harga:4000,kategori:'Permen & Coklat',emoji:'🍬'},
-  {id:42,nama:'Relaxa Permen',harga:2000,kategori:'Permen & Coklat',emoji:'🍬'},
-  {id:43,nama:'Silver Queen 62g',harga:15000,kategori:'Permen & Coklat',emoji:'🍫'},
-  {id:44,nama:'Kit Kat 2 Finger',harga:8000,kategori:'Permen & Coklat',emoji:'🍫'},
-  {id:45,nama:'Beng Beng',harga:4000,kategori:'Permen & Coklat',emoji:'🍫'},
-  {id:46,nama:'Gery Chocolatos',harga:3000,kategori:'Permen & Coklat',emoji:'🍫'},
-  // ROKOK
-  {id:47,nama:'Gudang Garam Merah 12',harga:24000,kategori:'Rokok',emoji:'🚬'},
-  {id:48,nama:'Gudang Garam Surya 16',harga:36000,kategori:'Rokok',emoji:'🚬'},
-  {id:49,nama:'Sampoerna Mild 16',harga:32000,kategori:'Rokok',emoji:'🚬'},
-  {id:50,nama:'Marlboro Merah 20',harga:38000,kategori:'Rokok',emoji:'🚬'},
-  {id:51,nama:'Dji Sam Soe 12',harga:22000,kategori:'Rokok',emoji:'🚬'},
-  {id:52,nama:'LA Bold 16',harga:30000,kategori:'Rokok',emoji:'🚬'},
-  {id:53,nama:'Camel Filter 20',harga:35000,kategori:'Rokok',emoji:'🚬'},
-  // SEMBAKO
-  {id:54,nama:'Beras 1kg',harga:14000,kategori:'Sembako',emoji:'🌾'},
-  {id:55,nama:'Gula Pasir 1kg',harga:16000,kategori:'Sembako',emoji:'🍚'},
-  {id:56,nama:'Minyak Goreng 1L',harga:18000,kategori:'Sembako',emoji:'🫙'},
-  {id:57,nama:'Telur Ayam 1kg',harga:28000,kategori:'Sembako',emoji:'🥚'},
-  {id:58,nama:'Tepung Terigu 1kg',harga:12000,kategori:'Sembako',emoji:'🌾'},
-  {id:59,nama:'Garam 250g',harga:3000,kategori:'Sembako',emoji:'🧂'},
-  // PRODUK SUSU
-  {id:60,nama:'Indomilk Cair 190ml',harga:5000,kategori:'Produk Susu',emoji:'🥛'},
-  {id:61,nama:'Bear Brand 189ml',harga:9000,kategori:'Produk Susu',emoji:'🐻'},
-  {id:62,nama:'Dancow Coklat Sachet',harga:4500,kategori:'Produk Susu',emoji:'🥛'},
-  {id:63,nama:'Milo Sachet 18g',harga:3500,kategori:'Produk Susu',emoji:'🥛'},
-  {id:64,nama:'Ovomaltine Sachet',harga:4000,kategori:'Produk Susu',emoji:'🥛'},
-  // ROTI & KUE
-  {id:65,nama:'Roti Tawar Sari Roti',harga:15000,kategori:'Roti & Kue',emoji:'🍞'},
-  {id:66,nama:'Roti Sobek Coklat',harga:8000,kategori:'Roti & Kue',emoji:'🍞'},
-  {id:67,nama:'Sponge Cake',harga:6000,kategori:'Roti & Kue',emoji:'🎂'},
-  {id:68,nama:'Bolu Kukus',harga:5000,kategori:'Roti & Kue',emoji:'🧁'},
-  // BUMBU & SAOS
-  {id:69,nama:'Saos Sambal ABC 135ml',harga:8000,kategori:'Bumbu & Saos',emoji:'🌶️'},
-  {id:70,nama:'Saos Tomat ABC 135ml',harga:8000,kategori:'Bumbu & Saos',emoji:'🍅'},
-  {id:71,nama:'Kecap Bango 135ml',harga:9000,kategori:'Bumbu & Saos',emoji:'🫙'},
-  {id:72,nama:'Royco Ayam Sachet',harga:2000,kategori:'Bumbu & Saos',emoji:'🧴'},
-  {id:73,nama:'Masako Sapi Sachet',harga:2000,kategori:'Bumbu & Saos',emoji:'🧴'},
-  // KEBERSIHAN DIRI
-  {id:74,nama:'Sabun Lifebuoy 85g',harga:5000,kategori:'Kebersihan Diri',emoji:'🧼'},
-  {id:75,nama:'Sabun Dettol 90g',harga:8000,kategori:'Kebersihan Diri',emoji:'🧼'},
-  {id:76,nama:'Sabun Cair Lux 60ml',harga:5000,kategori:'Kebersihan Diri',emoji:'🧴'},
-  {id:77,nama:'Pasta Gigi Pepsodent 75g',harga:9000,kategori:'Kebersihan Diri',emoji:'🦷'},
-  {id:78,nama:'Pasta Gigi Close Up',harga:9000,kategori:'Kebersihan Diri',emoji:'🦷'},
-  {id:79,nama:'Sikat Gigi Formula',harga:8000,kategori:'Kebersihan Diri',emoji:'🪥'},
-  {id:80,nama:'Deodorant Rexona 45ml',harga:15000,kategori:'Kebersihan Diri',emoji:'🧴'},
-  {id:81,nama:'Tisu Paseo 250 lembar',harga:12000,kategori:'Kebersihan Diri',emoji:'🧻'},
-  {id:82,nama:'Tisu Basah Paseo 10s',harga:5000,kategori:'Kebersihan Diri',emoji:'🧻'},
-  {id:83,nama:'Pembalut Charm Regular',harga:15000,kategori:'Kebersihan Diri',emoji:'🛍️'},
-  // PERAWATAN RAMBUT
-  {id:84,nama:'Shampoo Clear 170ml',harga:18000,kategori:'Perawatan Rambut',emoji:'💆'},
-  {id:85,nama:'Shampoo Pantene 170ml',harga:20000,kategori:'Perawatan Rambut',emoji:'💆'},
-  {id:86,nama:'Shampoo Sunsilk 170ml',harga:18000,kategori:'Perawatan Rambut',emoji:'💆'},
-  {id:87,nama:'Kondisioner Rejoice',harga:18000,kategori:'Perawatan Rambut',emoji:'💆'},
-  // DETERJEN & PEMBERSIH
-  {id:88,nama:'Rinso 110g Sachet',harga:4000,kategori:'Deterjen & Pembersih',emoji:'🧹'},
-  {id:89,nama:'Attack 110g Sachet',harga:3500,kategori:'Deterjen & Pembersih',emoji:'🧹'},
-  {id:90,nama:'So Klin Lantai 780ml',harga:18000,kategori:'Deterjen & Pembersih',emoji:'🧴'},
-  {id:91,nama:'Sunlight Jeruk 200ml',harga:7000,kategori:'Deterjen & Pembersih',emoji:'🍋'},
-  {id:92,nama:'Baygon Spray 600ml',harga:35000,kategori:'Deterjen & Pembersih',emoji:'🪲'},
-  // KESEHATAN
-  {id:93,nama:'Paracetamol 500mg 10tab',harga:5000,kategori:'Kesehatan',emoji:'💊'},
-  {id:94,nama:'Antangin JRG Sachet',harga:4000,kategori:'Kesehatan',emoji:'💊'},
-  {id:95,nama:'Tolak Angin Sachet',harga:5000,kategori:'Kesehatan',emoji:'💊'},
-  {id:96,nama:'Betadine 30ml',harga:15000,kategori:'Kesehatan',emoji:'🩹'},
-  {id:97,nama:'Hansaplast 10s',harga:8000,kategori:'Kesehatan',emoji:'🩹'},
-  {id:98,nama:'Masker 3 Ply isi 10',harga:10000,kategori:'Kesehatan',emoji:'😷'},
-  // ALAT TULIS
-  {id:99,nama:'Pulpen Pilot 1 biji',harga:5000,kategori:'Alat Tulis',emoji:'✒️'},
-  {id:100,nama:'Pensil 2B Faber',harga:4000,kategori:'Alat Tulis',emoji:'✏️'},
-  {id:101,nama:'Buku Tulis 58 lembar',harga:5000,kategori:'Alat Tulis',emoji:'📓'},
-  {id:102,nama:'Penggaris 30cm',harga:5000,kategori:'Alat Tulis',emoji:'📏'},
-  {id:103,nama:'Tip-X Correction',harga:7000,kategori:'Alat Tulis',emoji:'✏️'},
-  // PULSA & TOKEN
-  {id:104,nama:'Pulsa 10.000',harga:11000,kategori:'Pulsa & Token',emoji:'📱'},
-  {id:105,nama:'Pulsa 20.000',harga:21500,kategori:'Pulsa & Token',emoji:'📱'},
-  {id:106,nama:'Pulsa 50.000',harga:52000,kategori:'Pulsa & Token',emoji:'📱'},
-  {id:107,nama:'Paket Data 1GB',harga:15000,kategori:'Pulsa & Token',emoji:'📶'},
-  {id:108,nama:'Token Listrik 20.000',harga:21000,kategori:'Pulsa & Token',emoji:'⚡'},
-  {id:109,nama:'Token Listrik 50.000',harga:51500,kategori:'Pulsa & Token',emoji:'⚡'},
+  {id:1,nama:'Aqua 600ml',harga:4000,kategori:'Minuman',img:''},
+  {id:2,nama:'Aqua 1500ml',harga:6000,kategori:'Minuman',img:''},
+  {id:3,nama:'Le Minerale 600ml',harga:3500,kategori:'Minuman',img:''},
+  {id:4,nama:'Teh Botol Sosro 450ml',harga:5000,kategori:'Minuman',img:''},
+  {id:5,nama:'Teh Pucuk 350ml',harga:4000,kategori:'Minuman',img:''},
+  {id:6,nama:'Coca Cola 390ml',harga:7000,kategori:'Minuman',img:''},
+  {id:7,nama:'Sprite 390ml',harga:7000,kategori:'Minuman',img:''},
+  {id:8,nama:'Fanta 390ml',harga:7000,kategori:'Minuman',img:''},
+  {id:9,nama:'Pocari Sweat 500ml',harga:9000,kategori:'Minuman',img:''},
+  {id:10,nama:'Mizone 500ml',harga:8000,kategori:'Minuman',img:''},
+  {id:11,nama:'Good Day Cappuccino',harga:4500,kategori:'Minuman',img:''},
+  {id:12,nama:'Kopi Kapal Api Sachet',harga:2000,kategori:'Minuman',img:''},
+  {id:13,nama:'Nescafe 3in1',harga:3500,kategori:'Minuman',img:''},
+  {id:14,nama:'Susu Ultra 200ml',harga:6000,kategori:'Minuman',img:''},
+  {id:15,nama:'Floridina Jeruk',harga:5000,kategori:'Minuman',img:''},
+  {id:16,nama:'Indomie Goreng',harga:3500,kategori:'Mie & Bumbu',img:''},
+  {id:17,nama:'Indomie Soto',harga:3500,kategori:'Mie & Bumbu',img:''},
+  {id:18,nama:'Indomie Ayam Bawang',harga:3500,kategori:'Mie & Bumbu',img:''},
+  {id:19,nama:'Indomie Rendang',harga:3800,kategori:'Mie & Bumbu',img:''},
+  {id:20,nama:'Mie Sedaap Goreng',harga:3500,kategori:'Mie & Bumbu',img:''},
+  {id:21,nama:'Mie Sedaap Soto',harga:3500,kategori:'Mie & Bumbu',img:''},
+  {id:22,nama:'Pop Mie Ayam',harga:6000,kategori:'Mie & Bumbu',img:''},
+  {id:23,nama:'Pop Mie Goreng',harga:6000,kategori:'Mie & Bumbu',img:''},
+  {id:24,nama:'Sosis So Nice',harga:5000,kategori:'Makanan Siap Saji',img:''},
+  {id:25,nama:'Baso Aci',harga:7000,kategori:'Makanan Siap Saji',img:''},
+  {id:26,nama:'Telur Rebus',harga:3000,kategori:'Makanan Siap Saji',img:''},
+  {id:27,nama:'Roti Bakar',harga:8000,kategori:'Makanan Siap Saji',img:''},
+  {id:28,nama:'Chitato Original 68g',harga:10000,kategori:'Snack & Biskuit',img:''},
+  {id:29,nama:'Chitato Sapi Panggang',harga:10000,kategori:'Snack & Biskuit',img:''},
+  {id:30,nama:'Lays Original 62g',harga:10000,kategori:'Snack & Biskuit',img:''},
+  {id:31,nama:'Cheetos Jagung',harga:7000,kategori:'Snack & Biskuit',img:''},
+  {id:32,nama:'Qtela Singkong',harga:7000,kategori:'Snack & Biskuit',img:''},
+  {id:33,nama:'Oreo Original 133g',harga:12000,kategori:'Snack & Biskuit',img:''},
+  {id:34,nama:'Roma Kelapa',harga:8000,kategori:'Snack & Biskuit',img:''},
+  {id:35,nama:'Tango Wafer',harga:5000,kategori:'Snack & Biskuit',img:''},
+  {id:36,nama:'Richeese Nabati',harga:5000,kategori:'Snack & Biskuit',img:''},
+  {id:37,nama:'Makaroni Ngehe',harga:3000,kategori:'Snack & Biskuit',img:''},
+  {id:38,nama:'Kacang Garuda Salut 70g',harga:8000,kategori:'Snack & Biskuit',img:''},
+  {id:39,nama:'Keripik Maicih Lvl 3',harga:10000,kategori:'Snack & Biskuit',img:''},
+  {id:40,nama:'Kopiko Coklat',harga:2000,kategori:'Permen & Coklat',img:''},
+  {id:41,nama:'Mentos Mint',harga:4000,kategori:'Permen & Coklat',img:''},
+  {id:42,nama:'Relaxa Permen',harga:2000,kategori:'Permen & Coklat',img:''},
+  {id:43,nama:'Silver Queen 62g',harga:15000,kategori:'Permen & Coklat',img:''},
+  {id:44,nama:'Kit Kat 2 Finger',harga:8000,kategori:'Permen & Coklat',img:''},
+  {id:45,nama:'Beng Beng',harga:4000,kategori:'Permen & Coklat',img:''},
+  {id:46,nama:'Gery Chocolatos',harga:3000,kategori:'Permen & Coklat',img:''},
+  {id:47,nama:'Gudang Garam Merah 12',harga:24000,kategori:'Rokok',img:''},
+  {id:48,nama:'Gudang Garam Surya 16',harga:36000,kategori:'Rokok',img:''},
+  {id:49,nama:'Sampoerna Mild 16',harga:32000,kategori:'Rokok',img:''},
+  {id:50,nama:'Marlboro Merah 20',harga:38000,kategori:'Rokok',img:''},
+  {id:51,nama:'Dji Sam Soe 12',harga:22000,kategori:'Rokok',img:''},
+  {id:52,nama:'LA Bold 16',harga:30000,kategori:'Rokok',img:''},
+  {id:53,nama:'Camel Filter 20',harga:35000,kategori:'Rokok',img:''},
+  {id:54,nama:'Beras 1kg',harga:14000,kategori:'Sembako',img:''},
+  {id:55,nama:'Gula Pasir 1kg',harga:16000,kategori:'Sembako',img:''},
+  {id:56,nama:'Minyak Goreng 1L',harga:18000,kategori:'Sembako',img:''},
+  {id:57,nama:'Telur Ayam 1kg',harga:28000,kategori:'Sembako',img:''},
+  {id:58,nama:'Tepung Terigu 1kg',harga:12000,kategori:'Sembako',img:''},
+  {id:59,nama:'Garam 250g',harga:3000,kategori:'Sembako',img:''},
+  {id:60,nama:'Indomilk Cair 190ml',harga:5000,kategori:'Produk Susu',img:''},
+  {id:61,nama:'Bear Brand 189ml',harga:9000,kategori:'Produk Susu',img:''},
+  {id:62,nama:'Dancow Coklat Sachet',harga:4500,kategori:'Produk Susu',img:''},
+  {id:63,nama:'Milo Sachet 18g',harga:3500,kategori:'Produk Susu',img:''},
+  {id:64,nama:'Ovomaltine Sachet',harga:4000,kategori:'Produk Susu',img:''},
+  {id:65,nama:'Roti Tawar Sari Roti',harga:15000,kategori:'Roti & Kue',img:''},
+  {id:66,nama:'Roti Sobek Coklat',harga:8000,kategori:'Roti & Kue',img:''},
+  {id:67,nama:'Sponge Cake',harga:6000,kategori:'Roti & Kue',img:''},
+  {id:68,nama:'Bolu Kukus',harga:5000,kategori:'Roti & Kue',img:''},
+  {id:69,nama:'Saos Sambal ABC 135ml',harga:8000,kategori:'Bumbu & Saos',img:''},
+  {id:70,nama:'Saos Tomat ABC 135ml',harga:8000,kategori:'Bumbu & Saos',img:''},
+  {id:71,nama:'Kecap Bango 135ml',harga:9000,kategori:'Bumbu & Saos',img:''},
+  {id:72,nama:'Royco Ayam Sachet',harga:2000,kategori:'Bumbu & Saos',img:''},
+  {id:73,nama:'Masako Sapi Sachet',harga:2000,kategori:'Bumbu & Saos',img:''},
+  {id:74,nama:'Sabun Lifebuoy 85g',harga:5000,kategori:'Kebersihan Diri',img:''},
+  {id:75,nama:'Sabun Dettol 90g',harga:8000,kategori:'Kebersihan Diri',img:''},
+  {id:76,nama:'Sabun Cair Lux 60ml',harga:5000,kategori:'Kebersihan Diri',img:''},
+  {id:77,nama:'Pasta Gigi Pepsodent 75g',harga:9000,kategori:'Kebersihan Diri',img:''},
+  {id:78,nama:'Pasta Gigi Close Up',harga:9000,kategori:'Kebersihan Diri',img:''},
+  {id:79,nama:'Sikat Gigi Formula',harga:8000,kategori:'Kebersihan Diri',img:''},
+  {id:80,nama:'Deodorant Rexona 45ml',harga:15000,kategori:'Kebersihan Diri',img:''},
+  {id:81,nama:'Tisu Paseo 250 lembar',harga:12000,kategori:'Kebersihan Diri',img:''},
+  {id:82,nama:'Tisu Basah Paseo 10s',harga:5000,kategori:'Kebersihan Diri',img:''},
+  {id:83,nama:'Pembalut Charm Regular',harga:15000,kategori:'Kebersihan Diri',img:''},
+  {id:84,nama:'Shampoo Clear 170ml',harga:18000,kategori:'Perawatan Rambut',img:''},
+  {id:85,nama:'Shampoo Pantene 170ml',harga:20000,kategori:'Perawatan Rambut',img:''},
+  {id:86,nama:'Shampoo Sunsilk 170ml',harga:18000,kategori:'Perawatan Rambut',img:''},
+  {id:87,nama:'Kondisioner Rejoice',harga:18000,kategori:'Perawatan Rambut',img:''},
+  {id:88,nama:'Rinso 110g Sachet',harga:4000,kategori:'Deterjen & Pembersih',img:''},
+  {id:89,nama:'Attack 110g Sachet',harga:3500,kategori:'Deterjen & Pembersih',img:''},
+  {id:90,nama:'So Klin Lantai 780ml',harga:18000,kategori:'Deterjen & Pembersih',img:''},
+  {id:91,nama:'Sunlight Jeruk 200ml',harga:7000,kategori:'Deterjen & Pembersih',img:''},
+  {id:92,nama:'Baygon Spray 600ml',harga:35000,kategori:'Deterjen & Pembersih',img:''},
+  {id:93,nama:'Paracetamol 500mg 10tab',harga:5000,kategori:'Kesehatan',img:''},
+  {id:94,nama:'Antangin JRG Sachet',harga:4000,kategori:'Kesehatan',img:''},
+  {id:95,nama:'Tolak Angin Sachet',harga:5000,kategori:'Kesehatan',img:''},
+  {id:96,nama:'Betadine 30ml',harga:15000,kategori:'Kesehatan',img:''},
+  {id:97,nama:'Hansaplast 10s',harga:8000,kategori:'Kesehatan',img:''},
+  {id:98,nama:'Masker 3 Ply isi 10',harga:10000,kategori:'Kesehatan',img:''},
+  {id:99,nama:'Pulpen Pilot 1 biji',harga:5000,kategori:'Alat Tulis',img:''},
+  {id:100,nama:'Pensil 2B Faber',harga:4000,kategori:'Alat Tulis',img:''},
+  {id:101,nama:'Buku Tulis 58 lembar',harga:5000,kategori:'Alat Tulis',img:''},
+  {id:102,nama:'Penggaris 30cm',harga:5000,kategori:'Alat Tulis',img:''},
+  {id:103,nama:'Tip-X Correction',harga:7000,kategori:'Alat Tulis',img:''},
+  {id:104,nama:'Pulsa 10.000',harga:11000,kategori:'Pulsa & Token',img:''},
+  {id:105,nama:'Pulsa 20.000',harga:21500,kategori:'Pulsa & Token',img:''},
+  {id:106,nama:'Pulsa 50.000',harga:52000,kategori:'Pulsa & Token',img:''},
+  {id:107,nama:'Paket Data 1GB',harga:15000,kategori:'Pulsa & Token',img:''},
+  {id:108,nama:'Token Listrik 20.000',harga:21000,kategori:'Pulsa & Token',img:''},
+  {id:109,nama:'Token Listrik 50.000',harga:51500,kategori:'Pulsa & Token',img:''},
 ];
 let riwayat = JSON.parse(localStorage.getItem('dana_riwayat') || '[]');
 let cart = [];
 let activeKat = 'Semua';
 let activeProdKat = 'Semua';
 let editingId = null;
+let pendingImg = ''; // base64 gambar yang sedang diedit
 
 function simpan() {
   localStorage.setItem('dana_produk', JSON.stringify(produk));
@@ -507,13 +522,8 @@ function simpan() {
 }
 
 // ===== UTILS =====
-function rupiah(n) {
-  return 'Rp' + Number(n).toLocaleString('id-ID');
-}
-function getKategori() {
-  const k = [...new Set(produk.map(p=>p.kategori))];
-  return ['Semua',...k];
-}
+function rupiah(n) { return 'Rp' + Number(n).toLocaleString('id-ID'); }
+function getKategori() { return ['Semua',...new Set(produk.map(p=>p.kategori))]; }
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg;
@@ -524,12 +534,42 @@ function openSheet(id) {
   document.getElementById('overlay').classList.add('show');
   document.getElementById(id).classList.add('show');
 }
-function closeSheet(id) {
-  document.getElementById(id).classList.remove('show');
-}
+function closeSheet(id) { document.getElementById(id).classList.remove('show'); }
 function closeAll() {
   document.getElementById('overlay').classList.remove('show');
   ['sheetCart','sheetBayar','sheetSukses','sheetProduk'].forEach(s=>closeSheet(s));
+}
+function imgTag(src, cls='') {
+  return src ? `<img src="${src}" alt="" class="${cls}">` : '';
+}
+
+// ===== IMAGE UPLOAD =====
+function previewGambar(input) {
+  const file = input.files[0];
+  if (!file) return;
+  // Compress/resize to max 400px
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    const img = new Image();
+    img.onload = function() {
+      const canvas = document.createElement('canvas');
+      const MAX = 400;
+      let w = img.width, h = img.height;
+      if (w > h) { if(w>MAX){h=Math.round(h*MAX/w);w=MAX;} }
+      else { if(h>MAX){w=Math.round(w*MAX/h);h=MAX;} }
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      pendingImg = canvas.toDataURL('image/jpeg', 0.75);
+      // show preview
+      const prev = document.getElementById('imgPreview');
+      prev.src = pendingImg;
+      prev.style.display = 'block';
+      document.getElementById('imgUploadLabel').style.display = 'none';
+      document.getElementById('imgChangeBtn').style.display = 'block';
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
 }
 
 // ===== PAGES =====
@@ -544,10 +584,9 @@ function showPage(name, el) {
 }
 
 // ===== FILTER CHIPS =====
-function renderFilterBar(containerId, aktif, setter, onchange) {
+function renderFilterBar(containerId, aktif, setter) {
   const bar = document.getElementById(containerId);
-  const kat = getKategori();
-  bar.innerHTML = kat.map(k=>`<div class="filter-chip ${aktif===k?'active':''}" onclick="${setter}('${k}')">${k}</div>`).join('');
+  bar.innerHTML = getKategori().map(k=>`<div class="filter-chip ${aktif===k?'active':''}" onclick="${setter}('${k.replace(/'/g,"\\'")}')">${k}</div>`).join('');
 }
 
 // ===== KASIR PAGE =====
@@ -555,11 +594,7 @@ function setKatKasir(k) { activeKat=k; renderKasir(); }
 function renderKasir() {
   renderFilterBar('filterBarKasir', activeKat, 'setKatKasir');
   const q = document.getElementById('searchKasir').value.toLowerCase();
-  let list = produk.filter(p=>{
-    const matchKat = activeKat==='Semua' || p.kategori===activeKat;
-    const matchQ = p.nama.toLowerCase().includes(q);
-    return matchKat && matchQ;
-  });
+  let list = produk.filter(p=>(activeKat==='Semua'||p.kategori===activeKat) && p.nama.toLowerCase().includes(q));
   const grid = document.getElementById('productGrid');
   if(!list.length) {
     grid.innerHTML='<div class="empty-state" style="grid-column:span 2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><p>Produk tidak ditemukan</p></div>';
@@ -569,10 +604,12 @@ function renderKasir() {
     const inCart = cart.find(c=>c.id===p.id);
     return `<div class="product-card" onclick="addToCart(${p.id})">
       ${inCart?`<span class="product-qty-badge">${inCart.qty}</span>`:''}
-      <span class="product-emoji">${p.emoji||'📦'}</span>
-      <div class="product-name">${p.nama}</div>
-      <div class="product-category">${p.kategori}</div>
-      <div class="product-price">${rupiah(p.harga)}</div>
+      <div class="product-img-wrap">${p.img?`<img src="${p.img}" alt="">`:IMG_PH}</div>
+      <div class="product-info">
+        <div class="product-name">${p.nama}</div>
+        <div class="product-category">${p.kategori}</div>
+        <div class="product-price">${rupiah(p.harga)}</div>
+      </div>
       <button class="product-add-btn">+</button>
     </div>`;
   }).join('');
@@ -587,10 +624,9 @@ function addToCart(id) {
   else cart.push({...p, qty:1});
   updateCart();
   renderKasir();
-  showToast(`${p.emoji||''} ${p.nama} ditambahkan`);
+  showToast(p.nama + ' ditambahkan');
 }
 function updateCart() {
-  const total = cart.reduce((s,c)=>s+c.harga*c.qty,0);
   const qty = cart.reduce((s,c)=>s+c.qty,0);
   const badge = document.getElementById('cartBadge');
   badge.textContent = qty;
@@ -602,9 +638,8 @@ function showCart() {
   openSheet('sheetCart');
 }
 function renderCartSheet() {
-  const list = document.getElementById('cartList');
-  list.innerHTML = cart.map(c=>`<div class="cart-item">
-    <span class="cart-item-emoji">${c.emoji||'📦'}</span>
+  document.getElementById('cartList').innerHTML = cart.map(c=>`<div class="cart-item">
+    <div class="cart-item-img">${c.img?`<img src="${c.img}" alt="">`:CART_PH}</div>
     <div class="cart-item-info">
       <div class="cart-item-name">${c.nama}</div>
       <div class="cart-item-price">${rupiah(c.harga)} x ${c.qty} = ${rupiah(c.harga*c.qty)}</div>
@@ -614,7 +649,9 @@ function renderCartSheet() {
       <span class="qty-num">${c.qty}</span>
       <button class="qty-btn" onclick="changeQty(${c.id},1)">+</button>
     </div>
-    <button class="cart-delete" onclick="removeCart(${c.id})">🗑️</button>
+    <button class="cart-delete" onclick="removeCart(${c.id})">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+    </button>
   </div>`).join('');
   const sub = cart.reduce((s,c)=>s+c.harga*c.qty,0);
   document.getElementById('totalBox').innerHTML=`
@@ -627,15 +664,13 @@ function changeQty(id, delta) {
   cart[i].qty += delta;
   if(cart[i].qty <= 0) cart.splice(i,1);
   updateCart();
-  if(cart.length) renderCartSheet();
-  else closeAll();
+  if(cart.length) renderCartSheet(); else closeAll();
   renderKasir();
 }
 function removeCart(id) {
   cart = cart.filter(c=>c.id!==id);
   updateCart();
-  if(cart.length) renderCartSheet();
-  else { closeAll(); showToast('Keranjang kosong'); }
+  if(cart.length) renderCartSheet(); else { closeAll(); showToast('Keranjang kosong'); }
   renderKasir();
 }
 
@@ -648,44 +683,30 @@ function openBayar() {
   closeSheet('sheetCart');
   openSheet('sheetBayar');
 }
-function setNominal(n) {
-  document.getElementById('inputUang').value = n;
-  hitungKembalian();
-}
-function setNominalPas() {
-  const total = cart.reduce((s,c)=>s+c.harga*c.qty,0);
-  document.getElementById('inputUang').value = total;
-  hitungKembalian();
-}
+function setNominal(n) { document.getElementById('inputUang').value=n; hitungKembalian(); }
+function setNominalPas() { document.getElementById('inputUang').value=cart.reduce((s,c)=>s+c.harga*c.qty,0); hitungKembalian(); }
 function hitungKembalian() {
   const total = cart.reduce((s,c)=>s+c.harga*c.qty,0);
   const bayar = parseInt(document.getElementById('inputUang').value)||0;
   const info = document.getElementById('kembalianInfo');
-  const btnP = document.getElementById('btnProses');
-  if(!bayar) { info.innerHTML=''; btnP.disabled=false; return; }
-  if(bayar >= total) {
-    info.innerHTML=`<div class="kembalian-box"><span class="kembalian-label">💚 Kembalian</span><span class="kembalian-value">${rupiah(bayar-total)}</span></div>`;
-    btnP.disabled=false;
+  const btn = document.getElementById('btnProses');
+  if(!bayar) { info.innerHTML=''; btn.disabled=false; return; }
+  if(bayar>=total) {
+    info.innerHTML=`<div class="kembalian-box"><span class="kembalian-label">Kembalian</span><span class="kembalian-value">${rupiah(bayar-total)}</span></div>`;
+    btn.disabled=false;
   } else {
-    info.innerHTML=`<div class="kurang-box"><span class="kurang-label">❌ Kurang</span><span class="kurang-value">${rupiah(total-bayar)}</span></div>`;
-    btnP.disabled=true;
+    info.innerHTML=`<div class="kurang-box"><span class="kurang-label">Kurang</span><span class="kurang-value">${rupiah(total-bayar)}</span></div>`;
+    btn.disabled=true;
   }
 }
 function prosesTransaksi() {
   const total = cart.reduce((s,c)=>s+c.harga*c.qty,0);
   const bayar = parseInt(document.getElementById('inputUang').value)||0;
-  if(bayar < total) { showToast('Uang tidak cukup!'); return; }
-  const kembalian = bayar - total;
-  const now = new Date();
-  const trx = {
-    id: 'INV-'+Date.now(),
-    waktu: now.toLocaleString('id-ID'),
-    items: [...cart],
-    total, bayar, kembalian
-  };
+  if(bayar<total) { showToast('Uang tidak cukup!'); return; }
+  const trx = { id:'INV-'+Date.now(), waktu:new Date().toLocaleString('id-ID'), items:[...cart], total, bayar, kembalian:bayar-total };
   riwayat.unshift(trx);
   simpan();
-  cart = [];
+  cart=[];
   updateCart();
   renderKasir();
   closeSheet('sheetBayar');
@@ -697,13 +718,13 @@ function showSukses(trx) {
     <h3 style="text-align:center;margin-bottom:4px;font-size:18px">Pembayaran Berhasil!</h3>
     <p style="text-align:center;color:var(--gray3);font-size:13px;margin-bottom:16px">${trx.waktu}</p>
     <div class="nota-wrap">
-      <div class="nota-center" style="font-weight:700;font-size:14px">★ KASIR DANA ★</div>
-      <div class="nota-center" style="font-size:11px;margin-bottom:4px">Sistem Kasir Digital</div>
+      <div class="nota-center" style="font-weight:700;font-size:14px">KASIR DANA</div>
+      <div class="nota-center" style="font-size:11px;margin-bottom:4px">Toserba</div>
       <hr class="nota-hr">
       <div style="font-size:11px;margin-bottom:4px">${trx.id}</div>
       <div style="font-size:11px;margin-bottom:6px">${trx.waktu}</div>
       <hr class="nota-hr">
-      ${trx.items.map(i=>`<div class="nota-row"><span>${i.emoji||''} ${i.nama} x${i.qty}</span><span>${rupiah(i.harga*i.qty)}</span></div>`).join('')}
+      ${trx.items.map(i=>`<div class="nota-row"><span>${i.nama} x${i.qty}</span><span>${rupiah(i.harga*i.qty)}</span></div>`).join('')}
       <hr class="nota-hr">
       <div class="nota-row"><span>TOTAL</span><span style="font-weight:700">${rupiah(trx.total)}</span></div>
       <div class="nota-row"><span>BAYAR</span><span>${rupiah(trx.bayar)}</span></div>
@@ -712,7 +733,7 @@ function showSukses(trx) {
       <div class="nota-center" style="font-size:11px">Terima kasih sudah berbelanja!</div>
     </div>
     <div style="height:12px"></div>
-    <button class="btn btn-primary" onclick="closeAll()">✓ Selesai</button>`;
+    <button class="btn btn-primary" onclick="closeAll()">Selesai</button>`;
   openSheet('sheetSukses');
 }
 
@@ -721,36 +742,46 @@ function setKatProduk(k) { activeProdKat=k; renderProduk(); }
 function renderProduk() {
   renderFilterBar('filterBarProduk', activeProdKat, 'setKatProduk');
   const q = document.getElementById('searchProduk').value.toLowerCase();
-  let list = produk.filter(p=>{
-    const matchKat = activeProdKat==='Semua'||p.kategori===activeProdKat;
-    const matchQ = p.nama.toLowerCase().includes(q);
-    return matchKat && matchQ;
-  });
+  let list = produk.filter(p=>(activeProdKat==='Semua'||p.kategori===activeProdKat)&&p.nama.toLowerCase().includes(q));
   const ml = document.getElementById('manageList');
   if(!list.length) {
     ml.innerHTML='<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg><p>Belum ada produk</p></div>';
     return;
   }
   ml.innerHTML = list.map(p=>`<div class="manage-card">
-    <span class="manage-emoji">${p.emoji||'📦'}</span>
+    <div class="manage-img">${p.img?`<img src="${p.img}" alt="">`:MANAGE_PH}</div>
     <div class="manage-info">
       <div class="manage-name">${p.nama}</div>
       <div class="manage-meta">${p.kategori}</div>
       <div class="manage-price">${rupiah(p.harga)}</div>
     </div>
     <div class="manage-actions">
-      <button class="icon-btn icon-btn-edit" onclick="openEditProduk(${p.id})">✏️</button>
-      <button class="icon-btn icon-btn-del" onclick="hapusProduk(${p.id})">🗑️</button>
+      <button class="icon-btn icon-btn-edit" onclick="openEditProduk(${p.id})">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      </button>
+      <button class="icon-btn icon-btn-del" onclick="hapusProduk(${p.id})">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+      </button>
     </div>
   </div>`).join('');
 }
+
+function resetImgForm() {
+  pendingImg = '';
+  document.getElementById('imgPreview').src='';
+  document.getElementById('imgPreview').style.display='none';
+  document.getElementById('imgUploadLabel').style.display='flex';
+  document.getElementById('imgChangeBtn').style.display='none';
+  document.getElementById('inputGambar').value='';
+}
+
 function openAddProduk() {
   editingId = null;
+  resetImgForm();
   document.getElementById('sheetProdukTitle').textContent='Tambah Produk';
   document.getElementById('inputNama').value='';
   document.getElementById('inputHarga').value='';
-  document.getElementById('inputKategori').value='Makanan';
-  document.getElementById('inputEmoji').value='';
+  document.getElementById('inputKategori').value='Minuman';
   document.getElementById('editProdukId').value='';
   document.getElementById('btnHapusProduk').style.display='none';
   openSheet('sheetProduk');
@@ -759,11 +790,18 @@ function openEditProduk(id) {
   const p = produk.find(x=>x.id===id);
   if(!p) return;
   editingId = id;
+  resetImgForm();
+  if(p.img) {
+    pendingImg = p.img;
+    document.getElementById('imgPreview').src = p.img;
+    document.getElementById('imgPreview').style.display='block';
+    document.getElementById('imgUploadLabel').style.display='none';
+    document.getElementById('imgChangeBtn').style.display='block';
+  }
   document.getElementById('sheetProdukTitle').textContent='Edit Produk';
   document.getElementById('inputNama').value=p.nama;
   document.getElementById('inputHarga').value=p.harga;
   document.getElementById('inputKategori').value=p.kategori;
-  document.getElementById('inputEmoji').value=p.emoji||'';
   document.getElementById('editProdukId').value=id;
   document.getElementById('btnHapusProduk').style.display='block';
   openSheet('sheetProduk');
@@ -772,15 +810,14 @@ function saveProduk() {
   const nama = document.getElementById('inputNama').value.trim();
   const harga = parseInt(document.getElementById('inputHarga').value)||0;
   const kategori = document.getElementById('inputKategori').value;
-  const emoji = document.getElementById('inputEmoji').value.trim()||'📦';
   if(!nama) { showToast('Nama produk wajib diisi!'); return; }
   if(!harga) { showToast('Harga wajib diisi!'); return; }
   if(editingId) {
     const i = produk.findIndex(p=>p.id===editingId);
-    produk[i] = {...produk[i], nama, harga, kategori, emoji};
+    produk[i] = {...produk[i], nama, harga, kategori, img: pendingImg || produk[i].img || ''};
     showToast('Produk berhasil diupdate');
   } else {
-    produk.push({id:Date.now(), nama, harga, kategori, emoji});
+    produk.push({id:Date.now(), nama, harga, kategori, img: pendingImg});
     showToast('Produk berhasil ditambahkan');
   }
   simpan();
@@ -792,10 +829,7 @@ function hapusProduk(id) {
   if(!confirm('Hapus produk ini?')) return;
   produk = produk.filter(p=>p.id!==id);
   cart = cart.filter(c=>c.id!==id);
-  simpan();
-  updateCart();
-  renderProduk();
-  renderKasir();
+  simpan(); updateCart(); renderProduk(); renderKasir();
   showToast('Produk dihapus');
 }
 function hapusProdukEdit() {
@@ -803,11 +837,7 @@ function hapusProdukEdit() {
   if(!confirm('Hapus produk ini?')) return;
   produk = produk.filter(p=>p.id!==id);
   cart = cart.filter(c=>c.id!==id);
-  simpan();
-  updateCart();
-  closeAll();
-  renderProduk();
-  renderKasir();
+  simpan(); updateCart(); closeAll(); renderProduk(); renderKasir();
   showToast('Produk dihapus');
 }
 
@@ -820,13 +850,13 @@ function renderRiwayat() {
   }
   rl.innerHTML = riwayat.map(t=>`<div class="riwayat-card">
     <div class="riwayat-header">
-      <div><div class="riwayat-id">${t.id}</div><div class="riwayat-time">🕒 ${t.waktu}</div></div>
+      <div><div class="riwayat-id">${t.id}</div><div class="riwayat-time">${t.waktu}</div></div>
       <span class="badge badge-success">Lunas</span>
     </div>
-    <div class="riwayat-items">${t.items.map(i=>`${i.emoji||''}${i.nama} x${i.qty}`).join(' • ')}</div>
+    <div class="riwayat-items">${t.items.map(i=>`${i.nama} x${i.qty}`).join(' • ')}</div>
     <div class="riwayat-footer">
       <span class="riwayat-total">${rupiah(t.total)}</span>
-      <span class="riwayat-kembalian">💚 Kembali: ${rupiah(t.kembalian)}</span>
+      <span class="riwayat-kembalian">Kembali: ${rupiah(t.kembalian)}</span>
     </div>
   </div>`).join('');
 }
@@ -839,23 +869,16 @@ function renderLaporan() {
   document.getElementById('lapPendapatan').textContent = rupiah(total);
   document.getElementById('lapRata').textContent = jml?rupiah(Math.round(total/jml)):'Rp0';
   document.getElementById('lapProduk').textContent = produk.length;
-  // terlaris
   const pMap = {};
-  riwayat.forEach(t=>t.items.forEach(i=>{
-    pMap[i.nama] = (pMap[i.nama]||0)+i.qty;
-  }));
+  riwayat.forEach(t=>t.items.forEach(i=>{ pMap[i.nama]=(pMap[i.nama]||0)+i.qty; }));
   const sorted = Object.entries(pMap).sort((a,b)=>b[1]-a[1]).slice(0,5);
   const lapTerlaris = document.getElementById('lapTerlaris');
   if(!sorted.length) { lapTerlaris.innerHTML='<p style="color:var(--gray3);font-size:13px">Belum ada data</p>'; return; }
   const max = sorted[0][1];
   lapTerlaris.innerHTML = sorted.map(([nama,qty])=>`
     <div style="margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px">
-        <span>${nama}</span><span style="font-weight:700">${qty}x</span>
-      </div>
-      <div style="height:6px;background:#E3F2FD;border-radius:3px">
-        <div style="height:100%;background:var(--blue);border-radius:3px;width:${Math.round(qty/max*100)}%"></div>
-      </div>
+      <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px"><span>${nama}</span><span style="font-weight:700">${qty}x</span></div>
+      <div style="height:6px;background:#E3F2FD;border-radius:3px"><div style="height:100%;background:var(--blue);border-radius:3px;width:${Math.round(qty/max*100)}%"></div></div>
     </div>`).join('');
 }
 
