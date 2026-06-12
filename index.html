@@ -360,7 +360,8 @@
       <select class="form-select" id="inputKategori">
         <option value="Minuman">Minuman</option>
         <option value="Makanan Siap Saji">Makanan Siap Saji</option>
-        <option value="Mie & Bumbu">Mie &amp; Bumbu</option>
+        <option value="Mie  Instan">Mie Instan</option>
+        <option value="Bumbu">Bumbu</option>
         <option value="Snack & Biskuit">Snack &amp; Biskuit</option>
         <option value="Permen & Coklat">Permen &amp; Coklat</option>
         <option value="Rokok">Rokok</option>
@@ -368,10 +369,10 @@
         <option value="Produk Susu">Produk Susu</option>
         <option value="Roti & Kue">Roti &amp; Kue</option>
         <option value="Bumbu & Saos">Bumbu &amp; Saos</option>
-        <option value="Kebersihan Diri">Kebersihan Diri</option>
-        <option value="Perawatan Rambut">Perawatan Rambut</option>
+        <option value="Sabun">Sabun</option>
+        <option value="Shampo">Shampo</option>
         <option value="Deterjen & Pembersih">Deterjen &amp; Pembersih</option>
-        <option value="Kesehatan">Kesehatan</option>
+        <option value="Obat">Obat</option>
         <option value="Alat Tulis">Alat Tulis</option>
         <option value="Pulsa & Token">Pulsa &amp; Token</option>
         <option value="Lainnya">Lainnya</option>
@@ -446,14 +447,14 @@ const DEFAULT_PRODUK = [
   {id:13,nama:'Nescafe 3in1',harga:3500,kategori:'Minuman',img:''},
   {id:14,nama:'Susu Ultra 200ml',harga:6000,kategori:'Minuman',img:''},
   {id:15,nama:'Floridina Jeruk',harga:5000,kategori:'Minuman',img:''},
-  {id:16,nama:'Indomie Goreng',harga:3500,kategori:'Mie & Bumbu',img:''},
-  {id:17,nama:'Indomie Soto',harga:3500,kategori:'Mie & Bumbu',img:''},
-  {id:18,nama:'Indomie Ayam Bawang',harga:3500,kategori:'Mie & Bumbu',img:''},
-  {id:19,nama:'Indomie Rendang',harga:3800,kategori:'Mie & Bumbu',img:''},
-  {id:20,nama:'Mie Sedaap Goreng',harga:3500,kategori:'Mie & Bumbu',img:''},
-  {id:21,nama:'Mie Sedaap Soto',harga:3500,kategori:'Mie & Bumbu',img:''},
-  {id:22,nama:'Pop Mie Ayam',harga:6000,kategori:'Mie & Bumbu',img:''},
-  {id:23,nama:'Pop Mie Goreng',harga:6000,kategori:'Mie & Bumbu',img:''},
+  {id:16,nama:'Indomie Goreng',harga:3500,kategori:'Mie Instan',img:''},
+  {id:17,nama:'Indomie Soto',harga:3500,kategori:'Mie Instan',img:''},
+  {id:18,nama:'Indomie Ayam Bawang',harga:3500,kategori:'Mie Instan',img:''},
+  {id:19,nama:'Indomie Rendang',harga:3800,kategori:'Mie Instan',img:''},
+  {id:20,nama:'Mie Sedaap Goreng',harga:3500,kategori:'Mie Instan',img:''},
+  {id:21,nama:'Mie Sedaap Soto',harga:3500,kategori:'Mie Instan',img:''},
+  {id:22,nama:'Pop Mie Ayam',harga:6000,kategori:'Mie Instan',img:''},
+  {id:23,nama:'Pop Mie Goreng',harga:6000,kategori:'Mie Instan',img:''},
   {id:24,nama:'Sosis So Nice',harga:5000,kategori:'Makanan Siap Saji',img:''},
   {id:25,nama:'Baso Aci',harga:7000,kategori:'Makanan Siap Saji',img:''},
   {id:26,nama:'Telur Rebus',harga:3000,kategori:'Makanan Siap Saji',img:''},
@@ -499,15 +500,15 @@ const DEFAULT_PRODUK = [
   {id:66,nama:'Kecap Bango 135ml',harga:9000,kategori:'Bumbu & Saos',img:''},
   {id:67,nama:'Royco Ayam Sachet',harga:2000,kategori:'Bumbu & Saos',img:''},
   {id:68,nama:'Sabun Lifebuoy 85g',harga:5000,kategori:'Kebersihan Diri',img:''},
-  {id:69,nama:'Pasta Gigi Pepsodent 75g',harga:9000,kategori:'Kebersihan Diri',img:''},
-  {id:70,nama:'Tisu Paseo 250 lembar',harga:12000,kategori:'Kebersihan Diri',img:''},
-  {id:71,nama:'Shampoo Clear 170ml',harga:18000,kategori:'Perawatan Rambut',img:''},
-  {id:72,nama:'Shampoo Pantene 170ml',harga:20000,kategori:'Perawatan Rambut',img:''},
+  {id:69,nama:'Pasta Gigi Pepsodent 75g',harga:9000,kategori:'Sabun',img:''},
+  {id:70,nama:'Tisu Paseo 250 lembar',harga:12000,kategori:'Sabun',img:''},
+  {id:71,nama:'Shampoo Clear 170ml',harga:18000,kategori:'Shampo',img:''},
+  {id:72,nama:'Shampoo Pantene 170ml',harga:20000,kategori:'Shampo',img:''},
   {id:73,nama:'Rinso 110g Sachet',harga:4000,kategori:'Deterjen & Pembersih',img:''},
   {id:74,nama:'Sunlight Jeruk 200ml',harga:7000,kategori:'Deterjen & Pembersih',img:''},
-  {id:75,nama:'Paracetamol 500mg 10tab',harga:5000,kategori:'Kesehatan',img:''},
-  {id:76,nama:'Tolak Angin Sachet',harga:5000,kategori:'Kesehatan',img:''},
-  {id:77,nama:'Hansaplast 10s',harga:8000,kategori:'Kesehatan',img:''},
+  {id:75,nama:'Paracetamol 500mg 10tab',harga:5000,kategori:'Obat',img:''},
+  {id:76,nama:'Tolak Angin Sachet',harga:5000,kategori:'Obat',img:''},
+  {id:77,nama:'Hansaplast 10s',harga:8000,kategori:'Obat',img:''},
   {id:78,nama:'Pulpen Pilot 1 biji',harga:5000,kategori:'Alat Tulis',img:''},
   {id:79,nama:'Buku Tulis 58 lembar',harga:5000,kategori:'Alat Tulis',img:''},
   {id:80,nama:'Pulsa 10.000',harga:11000,kategori:'Pulsa & Token',img:''},
