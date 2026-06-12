@@ -531,9 +531,9 @@ let isSyncing = false;
 // ─── API ──────────────────────────────────────────────────
 async function apiCall(action, body={}) {
   if (!apiUrl) throw new Error('no-url');
-  const url = apiUrl + '?action=' + action;
-  const res = await fetch(url, {
+  const res = await fetch(apiUrl, {
     method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
     body: JSON.stringify({action, ...body}),
   });
   const data = await res.json();
